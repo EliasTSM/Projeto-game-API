@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/editar.css')}}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>scr="{{url_for('static', filename= 'js/bootstrap.bundle.min.js')}}"</script>
+    <script>scr="https://code.jquery.com/jquery-3.6.0.min.js"</script>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <form method="POST" action="">
+          <h1>Perfil</h1>
+          <div class="perfil-completo">
+            <div class="perfil-esquerda">
+              <img src="{{imagem}}" alt="Imagem de perfil" class="imagem-perfil">
+            </div>
+            <div class="perfil-direita">
+              <div class="informacoes">
+                <div class="input-box">
+                  <label for="nome">Nome</label>
+                  <input type="text" name="nome" id="nome" value="{{nome}}">
+                </div>
+                <div class="input-box">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input type="text" name="sobrenome" id="sobrenome" value="{{sobrenome}}">
+                </div>
+                <div class="input-box">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" value="{{email}}">
+                </div>
+                <div class="input-box">
+                  <label for="idade">Idade</label>
+                  <input type="text" name="idade" id="idade" value="{{idade}}">
+                </div>
+                <div class="input-box">
+                  <label for="cidade">Cidade</label>
+                  <input type="text" name="cidade" id="cidade" value="{{cidade}}">
+                </div>
+                <div class="input-box">
+                  <label for="senha">Senha</label>
+                  <input type="password" name="senha" id="senha" value="{{senha}}">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="botoes">
+            <input type="submit" class="btn-salvar" nome="salvar" value="salvar" >
+            <a href="{{url_for('perfil', id=id)}}" class="btn-cancelar">cancelar</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

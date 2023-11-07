@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/perfil.css')}}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>scr="{{url_for('static', filename= 'js/bootstrap.bundle.min.js')}}"</script>
+    <script>scr="https://code.jquery.com/jquery-3.6.0.min.js"</script>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <a href="{{url_for('perfil', id=id)}}" >Meu Perfil</a>
+        <a href="{{url_for('usuarios')}}" >Usuários</a>
+        <a href="{{url_for('login')}}" >Sair</a>
+      </div>
+      <div class="wrapper">
+        <form method="POST" action="">
+          <h1>Perfil</h1>
+          <div class="perfil-completo">
+            <div class="perfil-esquerda">
+              <img src="{{imagem}}" alt="Imagem de perfil" class="imagem-perfil">
+            </div>
+            <div class="perfil-direita">
+              <div class="informacoes">
+                <div class="input-box">
+                  <label for="nome">Nome</label>
+                  <p>{{nome}}</p>
+                </div>
+                <div class="input-box">
+                  <label for="sobrenome">Sobrenome</label>
+                  <p>{{sobrenome}}</p>
+                </div>
+                <div class="input-box">
+                  <label for="email">Email</label>
+                  <p>{{email}}</p>
+                </div>
+                <div class="input-box">
+                  <label for="idade">Idade</label>
+                  <p>{{idade}}</p>
+                </div>
+                <div class="input-box">
+                  <label for="cidade">Cidade</label>
+                  <p>{{cidade}}</p>
+                </div>
+                <div class="input-box">
+                  <label for="senha">Senha</label>
+                  <p>{{senha}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="botoes">
+            <a href="{{url_for('editar', id=id)}}" class="btn-editar">editar</a>
+            <input type="submit" class="btn-excluir" nome="excluir" value="excluir">
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

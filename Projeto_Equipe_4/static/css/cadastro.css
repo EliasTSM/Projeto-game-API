@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background-image: url('../img/back_cadastro.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: black;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper{
+  width: 55vw;
+  height: 80vh;
+  background: #ffffff5c;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #100f0f;
+  border-radius: 10px;
+  padding: 30px 40px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+
+}
+
+.wrapper .input-box{
+  width: 94%;
+  height: 30px;
+  margin: 40px 2px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+  font-size: 14px;
+  color: #0f0e0e;
+  padding: 2px 10px 2px 15px;
+}
+
+.input-box input:focus{
+  border-color: #ffffff;
+}
+
+.input-box label{
+  font-size: 18px;
+  margin-left: 10px;
+  color: #3b3b3b;
+}
+
+.input-box input::placeholder{
+  color: #0000005c;
+ }
+
+ .wrapper .btn-cadastrar{
+  width: 95%;
+  height: 40px;
+  background: #0e0e0e;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.wrapper .membro-link{
+  font-size: 16px ;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.membro-link p a{
+  color: #050505;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.membro-link p a:hover{
+  text-decoration: underline;
+}

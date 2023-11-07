@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/usuarios.css')}}">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>scr="{{url_for('static', filename= 'js/bootstrap.bundle.min.js')}}"</script>
+    <script>scr="https://code.jquery.com/jquery-3.6.0.min.js"</script>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <a href="{{url_for('perfil', id=id_atual)}}" >Meu Perfil</a>
+        <a href="{{url_for('usuarios')}}" >Usuários</a>
+        <a href="{{url_for('login')}}" >Sair</a>
+      </div>
+      <div class="wrapper">
+        <h1>Jogadores</h1>
+        <div class="container">
+          {% for id, nome, sobrenome, email, idade, cidade, senha, imagem in dados %}
+          <div class="perfil">
+            <img src="{{imagem}}" alt="Imagem de perfil" class="imagem-perfil">
+            <p>{{nome}}</p>
+            <a href="usuarios/{{id}}"> ver perfil</a>
+          </div>
+          {% endfor %}
+        </div>
+        {% if usuario_existe == "True" %}
+        <section class="modal">
+          <div class="wrapper-modal">
+            <div class="imagem-modal">
+              <img src="{{imagem}}" alt="Imagem de perfil" class="imagem-perfil-modal">
+            </div>
+            <div class="informacoes-modal">
+              <h2>{{nome}} {{sobrenome}} </h2>
+              <h4>{{cidade}}</h4>
+              <h4>{{idade}} anos</h4>
+              <h4>{{email}}</h4>
+            </div>
+            <div class="botao-modal">
+              <a href="{{url_for('usuarios')}}" type="submit" class="btn-fechar-modal">Fechar</a>
+            </div>
+          </div>
+        </section>
+        {% endif %} 
+      </div>
+    </main>
+  </body>
+</html>
